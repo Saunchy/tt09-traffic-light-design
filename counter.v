@@ -1,4 +1,4 @@
-//`timescale 1ns / 1ps
+`timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: TinyTapeout
 // Engineer: 
@@ -31,14 +31,14 @@ always @(posedge clk) begin
     if (reset_n == 1'b0)
         processQ <= 0;
     else begin
-        if (processQ < 128)
+        if (processQ < 127)
             processQ <= processQ + 1;
-        else if (processQ == 128)
+        else if (processQ == 127)
             processQ <= 0;
     end
 end
 //combinational logic 
 
 //assigns
-assign roll = (processQ == 128) ? 1'b1 : 1'b0;
+assign roll = (processQ == 127) ? 1'b1 : 1'b0;
 endmodule
