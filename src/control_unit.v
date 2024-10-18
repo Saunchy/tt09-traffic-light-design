@@ -22,18 +22,16 @@ module control_unit(
 input wire clk,
 input wire reset_n,
 input wire [1:0] sw_traffic_lights,
-input wire btn,
 
 output wire [2:0] cw_traffic_lights
 );
 
 //Signals
 //FSM states for traffic lights
-localparam [2:0] RST = 3'd0,
-                 Red = 3'd1,
-                 Green = 3'd2,
-                 Yellow = 3'd3,
-                 Button = 3'd4;
+localparam [2:0] RST = 2'd0,
+                 Red = 2'd1,
+                 Green = 2'd2,
+                 Yellow = 2'd3;
 reg [1:0]state_traffic_lights;
 
 /*
@@ -60,15 +58,10 @@ always @(posedge clk) begin
             Green: begin
                 if(sw_traffic_lights == 2'b11)
                     state_traffic_lights <= Yellow;
-                else if(btn == 1'b1)
-                    state_traffic_lights <= Button;
             end
             Yellow: begin
                 if(sw_traffic_lights == 2'b01)
                     state_traffic_lights <= Red;
-            end
-            Button: begin
-                state_traffic_lights <= Yellow;
             end
         endcase
     end
