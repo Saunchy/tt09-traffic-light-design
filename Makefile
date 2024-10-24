@@ -20,6 +20,13 @@ test_counter:
 	PYTHONOPTIMIZE=${NOASSERT} MODULE=test.test_counter vvp -M $$(cocotb-config --prefix)/cocotb/libs -m libcocotbvpi_icarus sim_build/sim.vvp
 	! grep failure results.xml
 
+test_control_unit:
+	rm -rf sim_build/
+	mkdir sim_build/
+	iverilog -o sim_build/sim.vvp -s control_unit -s dump -g2012 src/control_unit.v test/dump_control_unit.v
+	PYTHONOPTIMIZE=${NOASSERT} MODULE=test.test_control_unit vvp -M $$(cocotb-config --prefix)/cocotb/libs -m libcocotbvpi_icarus sim_build/sim.vvp
+	! grep failure results.xml
+
 show_%: %.vcd %.gtkw
 	gtkwave $^
 
