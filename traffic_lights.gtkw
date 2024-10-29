@@ -1,0 +1,23 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Wed Jan 13 11:57:07 2021
+[*]
+[dumpfile] "/home/matt/work/asic-workshop/project2.1/traffic_lights.vcd"
+[dumpfile_mtime] "Wed Jan 13 11:56:56 2021"
+[dumpfile_size] 62246
+[savefile] "/home/matt/work/asic-workshop/project2.1/traffic_lights.gtkw"
+[timestart] 0
+[size] 1867 1018
+[pos] -1 -1
+*-20.000000 14250000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 263
+[signals_width] 309
+[sst_expanded] 1
+[sst_vpaned_height] 331
+@28
+traffic_lights.clk
+traffic_lights.reset_n
+traffic_lights.btn
+traffic_lights.control[2:0]
+[pattern_trace] 1
+[pattern_trace] 0

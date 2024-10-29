@@ -1,6 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1729224944" />
-    <testcase name="test_counter" classname="test.test_control_unit" file="/home/zerotoasic/Desktop/tt09-traffic-light-design/test/test_control_unit.py" lineno="12" time="0.010105133056640625" sim_time_ns="530001.0" ratio_time="52448690.88108721" />
+    <property name="random_seed" value="1730172481" />
+    <testcase name="test_counter" classname="test.test_traffic_lights" file="/home/zerotoasic/Desktop/tt09-traffic-light-design/test/test_traffic_lights.py" lineno="12" time="1.088712453842163" sim_time_ns="4003001.0" ratio_time="3676821.1715343692" />
   </testsuite>
 </testsuites>
